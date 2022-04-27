@@ -1,20 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> ionic image </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-button expand="full" (click)="checkAccount()">Check account</ion-button>
+  <ion-button expand="full" (click)="captureImage()">capture image</ion-button>
+  <ion-button expand="full" (click)="openEmail()">open email</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card>
+    <ion-header>Current image</ion-header>
+    <ion-card-content>
+      <img [src]="currentImage" alt="photo" *ngIf="currentImage" />
+    </ion-card-content>
+  </ion-card>
 </ion-content>
