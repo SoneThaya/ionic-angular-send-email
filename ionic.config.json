@@ -1,0 +1,7 @@
+{
+  "name": "academyEmail",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
